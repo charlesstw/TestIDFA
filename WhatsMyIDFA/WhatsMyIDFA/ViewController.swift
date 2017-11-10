@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var idfaLabel: UILabel!
-    @IBOutlet weak var deviceInfoLabel: UILabel!
+    @IBOutlet weak var osVersionLabel: UILabel!
+    
     
     private var osVersion:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func getDeviceInfo() {
-        osVersion = UIDevice.current.systemVersion
+        osVersion = UIDevice.current.systemName + UIDevice.current.systemVersion
         
     }
     
