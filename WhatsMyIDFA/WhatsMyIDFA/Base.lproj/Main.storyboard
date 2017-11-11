@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,29 +29,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ast-fj-MaT">
-                                <rect key="frame" x="160.5" y="168" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ast-fj-MaT">
+                                <rect key="frame" x="0.0" y="168" width="320" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-aS-RQP">
-                                <rect key="frame" x="111" y="300.5" width="98" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAt-sq-AYJ">
-                                <rect key="frame" x="120" y="196.5" width="80" height="80"/>
+                                <rect key="frame" x="120" y="258" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.92956026158503402" green="0.91416316521904761" blue="0.91280074526870747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UAt-sq-AYJ" secondAttribute="height" multiplier="1:1" id="U9B-pQ-sKL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <state key="normal" title="Copy"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="40"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -63,30 +55,33 @@
                                     <action selector="copyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZL-Xb-rA7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99B-aN-Cak">
-                                <rect key="frame" x="87" y="343" width="146" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99B-aN-Cak">
+                                <rect key="frame" x="160" y="368" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.82068452380952384" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1dD-aS-RQP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1P3-Gj-Xg7"/>
+                            <constraint firstAttribute="trailing" secondItem="ast-fj-MaT" secondAttribute="trailing" id="3bm-Xo-tQx"/>
+                            <constraint firstItem="99B-aN-Cak" firstAttribute="top" secondItem="UAt-sq-AYJ" secondAttribute="bottom" constant="30" id="6wI-FC-uuI"/>
+                            <constraint firstItem="99B-aN-Cak" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7k0-di-RuI"/>
                             <constraint firstItem="UAt-sq-AYJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="80/320" id="8VO-2l-Tdo"/>
                             <constraint firstItem="UAt-sq-AYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUf-c6-9qn"/>
                             <constraint firstItem="ast-fj-MaT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/1.7" id="F8G-ar-jI0"/>
+                            <constraint firstItem="ast-fj-MaT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G88-UP-uce"/>
                             <constraint firstItem="Zs1-HC-HCl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/3" id="WFa-UI-U1Q"/>
-                            <constraint firstItem="1dD-aS-RQP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="XvH-ew-yJQ"/>
                             <constraint firstItem="Zs1-HC-HCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blY-1c-5Td"/>
-                            <constraint firstItem="UAt-sq-AYJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/1.2" id="h6H-lr-5cc"/>
+                            <constraint firstItem="UAt-sq-AYJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.05" id="h6H-lr-5cc"/>
                             <constraint firstItem="ast-fj-MaT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbS-by-cIJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CopyButton" destination="UAt-sq-AYJ" id="O9d-me-nkM"/>
                         <outlet property="idfaLabel" destination="ast-fj-MaT" id="k9q-Mf-40K"/>
                         <outlet property="osVersionLabel" destination="99B-aN-Cak" id="BKX-TX-9BC"/>
+                        <outlet property="titleLabel" destination="Zs1-HC-HCl" id="cbq-vl-Qux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

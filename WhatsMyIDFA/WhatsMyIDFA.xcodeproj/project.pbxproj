@@ -15,6 +15,11 @@
 		569414831FB59B6900139B9C /* WhatsMyIDFATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569414821FB59B6900139B9C /* WhatsMyIDFATests.swift */; };
 		5694148E1FB59B6900139B9C /* WhatsMyIDFAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694148D1FB59B6900139B9C /* WhatsMyIDFAUITests.swift */; };
 		5694149D1FB59DC700139B9C /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694149C1FB59DC700139B9C /* View+cornerRadius.swift */; };
+		76E65BAA1FB74DB900946B2E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA11FB74DB900946B2E /* SVIndefiniteAnimatedView.m */; };
+		76E65BAB1FB74DB900946B2E /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA31FB74DB900946B2E /* SVProgressAnimatedView.m */; };
+		76E65BAC1FB74DB900946B2E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76E65BA51FB74DB900946B2E /* SVProgressHUD.bundle */; };
+		76E65BAD1FB74DB900946B2E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA71FB74DB900946B2E /* SVProgressHUD.m */; };
+		76E65BAE1FB74DB900946B2E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA91FB74DB900946B2E /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,17 @@
 		5694148D1FB59B6900139B9C /* WhatsMyIDFAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsMyIDFAUITests.swift; sourceTree = "<group>"; };
 		5694148F1FB59B6900139B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5694149C1FB59DC700139B9C /* View+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
+		76E65BA01FB74DB900946B2E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		76E65BA11FB74DB900946B2E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		76E65BA21FB74DB900946B2E /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		76E65BA31FB74DB900946B2E /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		76E65BA41FB74DB900946B2E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		76E65BA51FB74DB900946B2E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		76E65BA61FB74DB900946B2E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		76E65BA71FB74DB900946B2E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		76E65BA81FB74DB900946B2E /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		76E65BA91FB74DB900946B2E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		76E65BB21FB74E5300946B2E /* WhatsMyIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatsMyIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +118,9 @@
 				5694146D1FB59B6900139B9C /* AppDelegate.swift */,
 				5694146F1FB59B6900139B9C /* ViewController.swift */,
 				569414711FB59B6900139B9C /* Main.storyboard */,
+				76E65BB21FB74E5300946B2E /* WhatsMyIDFA-Bridging-Header.h */,
 				5694149B1FB59DC700139B9C /* Utilities */,
+				76E65B9E1FB74DB900946B2E /* ThirdParty */,
 				569414741FB59B6900139B9C /* Assets.xcassets */,
 				569414761FB59B6900139B9C /* LaunchScreen.storyboard */,
 				569414791FB59B6900139B9C /* Info.plist */,
@@ -134,6 +152,31 @@
 				5694149C1FB59DC700139B9C /* View+cornerRadius.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		76E65B9E1FB74DB900946B2E /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				76E65B9F1FB74DB900946B2E /* SVProgressHUD */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		76E65B9F1FB74DB900946B2E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				76E65BA01FB74DB900946B2E /* SVIndefiniteAnimatedView.h */,
+				76E65BA11FB74DB900946B2E /* SVIndefiniteAnimatedView.m */,
+				76E65BA21FB74DB900946B2E /* SVProgressAnimatedView.h */,
+				76E65BA31FB74DB900946B2E /* SVProgressAnimatedView.m */,
+				76E65BA41FB74DB900946B2E /* SVProgressHUD-Prefix.pch */,
+				76E65BA51FB74DB900946B2E /* SVProgressHUD.bundle */,
+				76E65BA61FB74DB900946B2E /* SVProgressHUD.h */,
+				76E65BA71FB74DB900946B2E /* SVProgressHUD.m */,
+				76E65BA81FB74DB900946B2E /* SVRadialGradientLayer.h */,
+				76E65BA91FB74DB900946B2E /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +292,7 @@
 				569414781FB59B6900139B9C /* LaunchScreen.storyboard in Resources */,
 				569414751FB59B6900139B9C /* Assets.xcassets in Resources */,
 				569414731FB59B6900139B9C /* Main.storyboard in Resources */,
+				76E65BAC1FB74DB900946B2E /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E65BAE1FB74DB900946B2E /* SVRadialGradientLayer.m in Sources */,
 				569414701FB59B6900139B9C /* ViewController.swift in Sources */,
+				76E65BAB1FB74DB900946B2E /* SVProgressAnimatedView.m in Sources */,
 				5694149D1FB59DC700139B9C /* View+cornerRadius.swift in Sources */,
 				5694146E1FB59B6900139B9C /* AppDelegate.swift in Sources */,
+				76E65BAA1FB74DB900946B2E /* SVIndefiniteAnimatedView.m in Sources */,
+				76E65BAD1FB74DB900946B2E /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +482,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Charlesstw.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/CharlesMac/Documents/iOS/TestIDFA/WhatsMyIDFA/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -447,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Charlesstw.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/CharlesMac/Documents/iOS/TestIDFA/WhatsMyIDFA/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -528,6 +578,7 @@
 				569414941FB59B6900139B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569414951FB59B6900139B9C /* Build configuration list for PBXNativeTarget "WhatsMyIDFATests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +587,7 @@
 				569414971FB59B6900139B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569414981FB59B6900139B9C /* Build configuration list for PBXNativeTarget "WhatsMyIDFAUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +596,7 @@
 				5694149A1FB59B6900139B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
