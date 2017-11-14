@@ -67,8 +67,8 @@ class ViewController: UIViewController,GADBannerViewDelegate {
     func initBanner() {
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //test
-//        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //test
+        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
