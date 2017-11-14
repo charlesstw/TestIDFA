@@ -20,6 +20,7 @@
 		76E65BAC1FB74DB900946B2E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76E65BA51FB74DB900946B2E /* SVProgressHUD.bundle */; };
 		76E65BAD1FB74DB900946B2E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA71FB74DB900946B2E /* SVProgressHUD.m */; };
 		76E65BAE1FB74DB900946B2E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA91FB74DB900946B2E /* SVRadialGradientLayer.m */; };
+		D9CEA7EC183BAD4AFD590417 /* Pods_WhatsMyIDFA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C677B2792652B4414C803C91 /* Pods_WhatsMyIDFA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EDA49327AA966B39A613D5C /* Pods-WhatsMyIDFA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMyIDFA.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA.release.xcconfig"; sourceTree = "<group>"; };
 		5694146A1FB59B6900139B9C /* WhatsMyIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsMyIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5694146D1FB59B6900139B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5694146F1FB59B6900139B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		76E65BA81FB74DB900946B2E /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		76E65BA91FB74DB900946B2E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		76E65BB21FB74E5300946B2E /* WhatsMyIDFA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatsMyIDFA-Bridging-Header.h"; sourceTree = "<group>"; };
+		A33DD4E80A412AE152C570A0 /* Pods-WhatsMyIDFA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMyIDFA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA.debug.xcconfig"; sourceTree = "<group>"; };
+		C677B2792652B4414C803C91 /* Pods_WhatsMyIDFA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsMyIDFA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CEA7EC183BAD4AFD590417 /* Pods_WhatsMyIDFA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,8 @@
 				569414811FB59B6900139B9C /* WhatsMyIDFATests */,
 				5694148C1FB59B6900139B9C /* WhatsMyIDFAUITests */,
 				5694146B1FB59B6900139B9C /* Products */,
+				CB6B014F82F43CECF463EFE6 /* Pods */,
+				FE2942AE702D3939000C539D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +186,23 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		CB6B014F82F43CECF463EFE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A33DD4E80A412AE152C570A0 /* Pods-WhatsMyIDFA.debug.xcconfig */,
+				0EDA49327AA966B39A613D5C /* Pods-WhatsMyIDFA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE2942AE702D3939000C539D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C677B2792652B4414C803C91 /* Pods_WhatsMyIDFA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 569414921FB59B6900139B9C /* Build configuration list for PBXNativeTarget "WhatsMyIDFA" */;
 			buildPhases = (
+				14BA11B73A9E5E54842A9D95 /* [CP] Check Pods Manifest.lock */,
 				569414661FB59B6900139B9C /* Sources */,
 				569414671FB59B6900139B9C /* Frameworks */,
 				569414681FB59B6900139B9C /* Resources */,
+				17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */,
+				809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,8 +274,8 @@
 				TargetAttributes = {
 					569414691FB59B6900139B9C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7T8HSHZPQ4;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = RJYZ49S9JJ;
+						ProvisioningStyle = Manual;
 					};
 					5694147D1FB59B6900139B9C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -311,6 +338,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14BA11B73A9E5E54842A9D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		569414661FB59B6900139B9C /* Sources */ = {
@@ -475,28 +550,51 @@
 		};
 		569414931FB59B6900139B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33DD4E80A412AE152C570A0 /* Pods-WhatsMyIDFA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7T8HSHZPQ4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Charlesstw.WhatsMyIDFA;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Charles.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/CharlesMac/Documents/iOS/TestIDFA/WhatsMyIDFA/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
+				PROVISIONING_PROFILE = "361b73b6-c7e4-4d61-8475-749c65e3da98";
+				PROVISIONING_PROFILE_SPECIFIER = CharlesDevAll;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		569414941FB59B6900139B9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EDA49327AA966B39A613D5C /* Pods-WhatsMyIDFA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7T8HSHZPQ4;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Charlesstw.WhatsMyIDFA;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Charles.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/CharlesMac/Documents/iOS/TestIDFA/WhatsMyIDFA/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
+				PROVISIONING_PROFILE = "02fd9e77-50ee-42ed-ba28-bf69bc182325";
+				PROVISIONING_PROFILE_SPECIFIER = WhatsMyIDFA_AppleStore;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
