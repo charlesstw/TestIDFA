@@ -45,7 +45,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
             idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
         } else {
-            idfa = "You are not allow Ad tracking"
+            idfa = "You are limited Ad tracking"
         }
         if (!ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
             self.titleLabel.text = "Oops.."

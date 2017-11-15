@@ -552,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A33DD4E80A412AE152C570A0 /* Pods-WhatsMyIDFA.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RJYZ49S9JJ;
@@ -577,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0EDA49327AA966B39A613D5C /* Pods-WhatsMyIDFA.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
