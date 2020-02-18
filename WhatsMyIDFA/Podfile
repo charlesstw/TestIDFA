@@ -3,4 +3,6 @@ use_frameworks!
 
 target 'WhatsMyIDFA' do
   pod 'Google-Mobile-Ads-SDK'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/DynamicLinks'
 end

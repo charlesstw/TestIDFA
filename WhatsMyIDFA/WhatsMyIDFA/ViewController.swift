@@ -26,7 +26,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getDeviceInfo()
-        NotificationCenter.default.addObserver(self, selector: #selector(getDeviceInfo), name: .UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(getDeviceInfo), name: UIApplication.didBecomeActiveNotification, object: nil)
         initBanner()
     }
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         
     }
     
-    func getDeviceInfo() {
+    @objc func getDeviceInfo() {
         osVersion = UIDevice.current.systemName + " " + UIDevice.current.systemVersion
         if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
             idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
@@ -49,10 +49,10 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         }
         if (!ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
             self.titleLabel.text = "Oops.."
-            self.CopyButton.setTitle("Setting", for: UIControlState.normal)
+            self.CopyButton.setTitle("Setting", for: UIControl.State.normal)
         } else {
             self.titleLabel.text = "Your IDFA is"
-            self.CopyButton.setTitle("Copy", for: UIControlState.normal)
+            self.CopyButton.setTitle("Copy", for: UIControl.State.normal)
         }
         self.osVersionLabel.text = self.osVersion!
         self.idfaLabel.text = idfa!
@@ -68,9 +68,9 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
 //        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //test
-        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
+//        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.load(GADRequest())
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -107,7 +107,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         if (UIApplication.shared.canOpenURL(settingUrl!)){
             
         } else {
-            settingUrl = URL(string: UIApplicationOpenSettingsURLString)!
+            settingUrl = URL(string: UIApplication.openSettingsURLString)!
         }
         UIApplication.shared.openURL(settingUrl!)
     }

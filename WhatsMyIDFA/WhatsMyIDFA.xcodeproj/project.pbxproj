@@ -15,6 +15,7 @@
 		569414831FB59B6900139B9C /* WhatsMyIDFATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569414821FB59B6900139B9C /* WhatsMyIDFATests.swift */; };
 		5694148E1FB59B6900139B9C /* WhatsMyIDFAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694148D1FB59B6900139B9C /* WhatsMyIDFAUITests.swift */; };
 		5694149D1FB59DC700139B9C /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694149C1FB59DC700139B9C /* View+cornerRadius.swift */; };
+		56A506F423F647CB0082D2EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56A506F323F647CB0082D2EA /* GoogleService-Info.plist */; };
 		76E65BAA1FB74DB900946B2E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA11FB74DB900946B2E /* SVIndefiniteAnimatedView.m */; };
 		76E65BAB1FB74DB900946B2E /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E65BA31FB74DB900946B2E /* SVProgressAnimatedView.m */; };
 		76E65BAC1FB74DB900946B2E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76E65BA51FB74DB900946B2E /* SVProgressHUD.bundle */; };
@@ -56,6 +57,8 @@
 		5694148D1FB59B6900139B9C /* WhatsMyIDFAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsMyIDFAUITests.swift; sourceTree = "<group>"; };
 		5694148F1FB59B6900139B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5694149C1FB59DC700139B9C /* View+cornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
+		56A506F323F647CB0082D2EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56C5B46523D5AFED00B39231 /* WhatsMyIDFA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatsMyIDFA.entitlements; sourceTree = "<group>"; };
 		76E65BA01FB74DB900946B2E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		76E65BA11FB74DB900946B2E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		76E65BA21FB74DB900946B2E /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 		5694146C1FB59B6900139B9C /* WhatsMyIDFA */ = {
 			isa = PBXGroup;
 			children = (
+				56C5B46523D5AFED00B39231 /* WhatsMyIDFA.entitlements */,
 				5694146D1FB59B6900139B9C /* AppDelegate.swift */,
 				5694146F1FB59B6900139B9C /* ViewController.swift */,
 				569414711FB59B6900139B9C /* Main.storyboard */,
@@ -131,6 +135,7 @@
 				569414741FB59B6900139B9C /* Assets.xcassets */,
 				569414761FB59B6900139B9C /* LaunchScreen.storyboard */,
 				569414791FB59B6900139B9C /* Info.plist */,
+				56A506F223F647B30082D2EA /* SupportFile */,
 			);
 			path = WhatsMyIDFA;
 			sourceTree = "<group>";
@@ -159,6 +164,14 @@
 				5694149C1FB59DC700139B9C /* View+cornerRadius.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		56A506F223F647B30082D2EA /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				56A506F323F647CB0082D2EA /* GoogleService-Info.plist */,
+			);
+			path = SupportFile;
 			sourceTree = "<group>";
 		};
 		76E65B9E1FB74DB900946B2E /* ThirdParty */ = {
@@ -215,7 +228,6 @@
 				569414671FB59B6900139B9C /* Frameworks */,
 				569414681FB59B6900139B9C /* Resources */,
 				17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */,
-				809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,7 +287,7 @@
 					569414691FB59B6900139B9C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RJYZ49S9JJ;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					5694147D1FB59B6900139B9C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -296,6 +308,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -318,6 +331,7 @@
 			files = (
 				569414781FB59B6900139B9C /* LaunchScreen.storyboard in Resources */,
 				569414751FB59B6900139B9C /* Assets.xcassets in Resources */,
+				56A506F423F647CB0082D2EA /* GoogleService-Info.plist in Resources */,
 				569414731FB59B6900139B9C /* Main.storyboard in Resources */,
 				76E65BAC1FB74DB900946B2E /* SVProgressHUD.bundle in Resources */,
 			);
@@ -346,13 +360,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsMyIDFA-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */ = {
@@ -361,28 +378,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -554,7 +563,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = WhatsMyIDFA/WhatsMyIDFA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,10 +579,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Charles.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f108166-c1cb-4e2b-afa8-18f1ed6e51da";
-				PROVISIONING_PROFILE_SPECIFIER = CharlesDevAll;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -580,8 +592,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = WhatsMyIDFA/WhatsMyIDFA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -594,10 +608,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Charles.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02fd9e77-50ee-42ed-ba28-bf69bc182325";
-				PROVISIONING_PROFILE_SPECIFIER = WhatsMyIDFA_AppleStore;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
