@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		567BAF5E251364EB00251EAB /* TADIdfaHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 567BAF5C251364EB00251EAB /* TADIdfaHandler.m */; };
 		5694146E1FB59B6900139B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694146D1FB59B6900139B9C /* AppDelegate.swift */; };
 		569414701FB59B6900139B9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694146F1FB59B6900139B9C /* ViewController.swift */; };
 		569414731FB59B6900139B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569414711FB59B6900139B9C /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0EDA49327AA966B39A613D5C /* Pods-WhatsMyIDFA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMyIDFA.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA.release.xcconfig"; sourceTree = "<group>"; };
+		567BAF5C251364EB00251EAB /* TADIdfaHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADIdfaHandler.m; sourceTree = "<group>"; };
+		567BAF5D251364EB00251EAB /* TADIdfaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADIdfaHandler.h; sourceTree = "<group>"; };
 		5694146A1FB59B6900139B9C /* WhatsMyIDFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsMyIDFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5694146D1FB59B6900139B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5694146F1FB59B6900139B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				5694146D1FB59B6900139B9C /* AppDelegate.swift */,
 				5694146F1FB59B6900139B9C /* ViewController.swift */,
 				569414711FB59B6900139B9C /* Main.storyboard */,
+				567BAF5D251364EB00251EAB /* TADIdfaHandler.h */,
+				567BAF5C251364EB00251EAB /* TADIdfaHandler.m */,
 				76E65BB21FB74E5300946B2E /* WhatsMyIDFA-Bridging-Header.h */,
 				5694149B1FB59DC700139B9C /* Utilities */,
 				76E65B9E1FB74DB900946B2E /* ThirdParty */,
@@ -214,8 +219,6 @@
 				569414661FB59B6900139B9C /* Sources */,
 				569414671FB59B6900139B9C /* Frameworks */,
 				569414681FB59B6900139B9C /* Resources */,
-				17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */,
-				809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +299,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -346,43 +350,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsMyIDFA-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		17F0E51C60D4978D0164EB00 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		809935867E1DB50566FD62D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsMyIDFA/Pods-WhatsMyIDFA-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -398,6 +375,7 @@
 				5694149D1FB59DC700139B9C /* View+cornerRadius.swift in Sources */,
 				5694146E1FB59B6900139B9C /* AppDelegate.swift in Sources */,
 				76E65BAA1FB74DB900946B2E /* SVIndefiniteAnimatedView.m in Sources */,
+				567BAF5E251364EB00251EAB /* TADIdfaHandler.m in Sources */,
 				76E65BAD1FB74DB900946B2E /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,9 +533,11 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -570,7 +550,7 @@
 				PROVISIONING_PROFILE = "8f108166-c1cb-4e2b-afa8-18f1ed6e51da";
 				PROVISIONING_PROFILE_SPECIFIER = CharlesDevAll;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -580,11 +560,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = RJYZ49S9JJ;
 				INFOPLIST_FILE = WhatsMyIDFA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -594,10 +577,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Charles.WhatsMyIDFA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02fd9e77-50ee-42ed-ba28-bf69bc182325";
 				PROVISIONING_PROFILE_SPECIFIER = WhatsMyIDFA_AppleStore;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WhatsMyIDFA/WhatsMyIDFA-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

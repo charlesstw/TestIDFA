@@ -4,9 +4,13 @@ PODS:
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
 
+SPEC REPOS:
+  trunk:
+    - Google-Mobile-Ads-SDK
+
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 92dff0e9ce1cfdfe640d9d80ab86d5e4371e478f
 
 PODFILE CHECKSUM: 6778ae3937e4b193079baba776d252a099c23539
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.9.3

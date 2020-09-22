@@ -17,17 +17,24 @@ class ViewController: UIViewController,GADBannerViewDelegate {
     @IBOutlet weak var osVersionLabel: UILabel!
     @IBOutlet weak var CopyButton: UIButton!
     
-    private var osVersion:String?
-    private var idfa:String?
+    private var osVersion: String?
+    private var idfa: String?
+    private var isAllowTracking: Bool = false
     
     var bannerView: GADBannerView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDeviceInfo()
-        NotificationCenter.default.addObserver(self, selector: #selector(getDeviceInfo), name: .UIApplicationDidBecomeActive, object: nil)
-        initBanner()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.initBanner()
+            self.getDeviceInfo()
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(getDeviceInfo), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,23 +47,22 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         
     }
     
-    func getDeviceInfo() {
+    @objc func getDeviceInfo() {
+        let oIdfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        print("idfa: \(oIdfa)")
+        let limitAdTracking = "Ad tracking is limited"
         osVersion = UIDevice.current.systemName + " " + UIDevice.current.systemVersion
-        if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
-            idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        let idfaHandler = TADIdfaHandler()
+        let allowTracking = idfaHandler.getIsAllowTracking()
+        if (allowTracking) {
+            self.idfa = idfaHandler.getIDFA()
         } else {
-            idfa = "You are limited Ad tracking"
+            self.idfa = limitAdTracking
         }
-        if (!ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
-            self.titleLabel.text = "Oops.."
-            self.CopyButton.setTitle("Setting", for: UIControlState.normal)
-        } else {
-            self.titleLabel.text = "Your IDFA is"
-            self.CopyButton.setTitle("Copy", for: UIControlState.normal)
-        }
-        self.osVersionLabel.text = self.osVersion!
-        self.idfaLabel.text = idfa!
+        self.showIDFA(allow: allowTracking)
         
+//        self.idfa = "81B2BB98-BCC8-4F91-807A-9EE68B45F501"
+//        self.showIDFA(allow: true)
     }
     
     func setupUI() {
@@ -64,13 +70,27 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         self.CopyButton.layer.masksToBounds = true
     }
     
+    func showIDFA(allow: Bool) {
+        isAllowTracking = allow
+        
+            if (allow) {
+                self.titleLabel.text = "Your IDFA is"
+                self.CopyButton.setTitle("Copy", for: UIControl.State.normal)
+            } else {
+                self.titleLabel.text = "Oops.."
+                self.CopyButton.setTitle("Setting", for: UIControl.State.normal)
+            }
+            self.osVersionLabel.text = self.osVersion ?? ""
+            self.idfaLabel.text = self.idfa ?? ""
+    }
+    
     func initBanner() {
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
 //        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //test
-        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.adUnitID = "ca-app-pub-7592415331992597/9323287140"
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -103,13 +123,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
         SVProgressHUD.showSuccess(withStatus: "Copied to pasteboard")
     }
     func goSetting() {
-        var settingUrl =  URL(string: "App-Prefs:root=Privacy&path=ADVERTISING")
-        if (UIApplication.shared.canOpenURL(settingUrl!)){
-            
-        } else {
-            settingUrl = URL(string: UIApplicationOpenSettingsURLString)!
-        }
-        UIApplication.shared.openURL(settingUrl!)
+        UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
     }
     
     // MARK:- AdMob delegate
@@ -152,7 +166,7 @@ class ViewController: UIViewController,GADBannerViewDelegate {
     
     // MARK: - Button Action
     @IBAction func copyButtonPressed(_ sender: Any) {
-        if (ASIdentifierManager.shared().isAdvertisingTrackingEnabled) {
+        if (isAllowTracking) {
             copyToPasteBoard()
         } else {
             goSetting()
